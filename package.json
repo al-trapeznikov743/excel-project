@@ -1,0 +1,31 @@
+{
+  "name": "project_01_excel",
+  "version": "1.0.0",
+  "description": "JS Excel Application",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/al-trapeznikov743/excel-project.github.io.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "excel"
+  ],
+  "author": "al-trapeznikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/al-trapeznikov743/excel-project.github.io/issues"
+  },
+  "homepage": "https://github.com/al-trapeznikov743/excel-project.github.io#readme",
+  "private": true,
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
