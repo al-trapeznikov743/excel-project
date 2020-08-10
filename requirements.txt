@@ -1,6 +1,6 @@
 Webpack (imports/exports)
     Babel
-    Sass
+    Scss(sass)
     Eslint
     2 modes
         Dev
