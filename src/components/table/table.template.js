@@ -3,22 +3,29 @@ const CODES = {
     Z: 90
 }
 
-function toCell() {
+function toCell(_, col) {
     return `
-        <div class="table__row-cell"contenteditable></div>
+        <div class="table__row-cell"contenteditable data-col="${col}"></div>
     `
 }
 
-function createCol(col) {
+function createCol(col, index) {
     return `
-        <div class="table__row-column">${col}</div>
+        <div class="table__row-column" data-type="resizable" data-col="${index}">
+            ${col}
+            <div class="col-resize" data-resize="col"></div>
+        </div>
     `
 }
 
 function createRow(index, content) {
+    const resize = index ? '<div class="row-resize" data-resize="row"></div>' : ''
     return `
-        <div class="table__row">
-            <div class="table__row-info">${index ? index : ''}</div>
+        <div class="table__row" data-type="resizable">
+            <div class="table__row-info">
+                ${index ? index : ''}
+                ${resize}
+            </div>
             <div class="table__row-data">${content}</div>
         </div>
     `
@@ -32,9 +39,7 @@ export function createTable(rowsCount = 15) {
         .map((el, index) => {
             return String.fromCharCode(CODES.A + index)
         })
-        .map(el => {
-            return createCol(el)
-        })
+        .map(createCol)
         .join('')
     rows.push(createRow(null, cols))
 
