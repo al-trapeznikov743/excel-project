@@ -32,7 +32,6 @@ class Dom {
         }
         return this
     }
-<<<<<<< HEAD
     closest(selector) {
         return $(this.$el.closest(selector))
     }
@@ -52,8 +51,6 @@ class Dom {
     get data() {
         return this.$el.dataset
     }
-=======
->>>>>>> master
 }
 export function $(selector) {
     return new Dom(selector)
