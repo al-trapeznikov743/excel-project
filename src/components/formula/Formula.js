@@ -14,7 +14,7 @@ export class Formula extends ExcelComponent {
     }
     toHTML() {
         return `
-            <div class="formula-info">fx</div>
+            <div class="formula-info no-use">fx</div>
             <div id="formula" class="formula__input" contenteditable spellcheck="false"></div>
         `
     }

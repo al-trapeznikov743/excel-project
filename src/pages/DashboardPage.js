@@ -7,15 +7,15 @@ export class DashboardPage extends Page {
         const now = Date.now().toString()
         return $.create('div', 'db')
             .html(`
-                <div class="db__header">
+                <div class="db__header no-use">
                     <h1>Excel Dashboard</h1>
                 </div>
                 <div class="db__new">
                     <div class="db__view">
-                        <a href="#excel/${now}" class="db__create">New Table</a>
+                        <a href="#excel/${now}" class="db__create no-use">New Table</a>
                     </div>
                 </div>
-                <div class="db__table db__view">
+                <div class="db__table db__view no-use">
                     ${createRecordsTable()}
                 </div>
             `

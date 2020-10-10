@@ -4,7 +4,7 @@ function toButton(button) {
         data-value='${JSON.stringify(button.value)}'
     `
     return `
-        <div class="toolbar__button ${button.active ? 'active' : ''}" ${meta}>
+        <div class="toolbar__button ${button.active ? 'active' : ''} no-use" ${meta}>
             <span class="material-icons" ${meta}>${button.icon}</span>
         </div>
     `

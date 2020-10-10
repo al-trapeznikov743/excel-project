@@ -24,9 +24,9 @@ export class Header extends ExcelComponent {
         const title = this.store.getState().title || defaultTitle
         return `
             <input type="text" class="header__input" value="${title}">
-            <div>
+            <div class="no-use">
                 <div class="header__button" data-button="remove">
-                    <span class="material-icons" data-button="remove">delete_outline</span>
+                    <span class="material-icons no-use" data-button="remove">delete_outline</span>
                 </div>
                 <div class="header__button" data-button="exit">
                     <span class="material-icons" data-button="exit">exit_to_app</span>

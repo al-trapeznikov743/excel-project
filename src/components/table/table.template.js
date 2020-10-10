@@ -39,7 +39,7 @@ function toCell(state, row) {
 
 function createCol({col, index, width}) {
     return `
-        <div class="table__row-column" data-type="resizable" data-col="${index}" style="width: ${width}">
+        <div class="table__row-column no-use" data-type="resizable" data-col="${index}" style="width: ${width}">
             ${col}
             <div class="col-resize" data-resize="col"></div>
         </div>
@@ -51,7 +51,7 @@ function createRow(index, content, state) {
     const height = getHeight(state, index)
     return `
         <div class="table__row" data-type="resizable" data-row="${index}" style="height: ${height}">
-            <div class="table__row-info">
+            <div class="table__row-info no-use">
                 ${index ? index : ''}
                 ${resize}
             </div>
