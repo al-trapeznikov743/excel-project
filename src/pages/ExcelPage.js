@@ -5,35 +5,10 @@ import {Formula} from '@/components/formula/Formula'
 import {Table} from '@/components/table/Table'
 import {createStore} from '@core/store/createStore'
 import {rootReducer} from '../redux/rootReducer'
-import {storage} from '@core/utils'
 import {normalizeInitialState} from '../redux/initialState'
 import {Page} from '../core/page/Page'
 import {StateProcessor} from '../core/page/StateProcessor'
-
-function storageName(param) {
-    return 'excel:' + param
-}
-
-class LocalStorageClient {
-    constructor(name) {
-        this.name = storageName(name)
-    }
-
-    save(state) {
-        storage(this.name, state)
-        return Promise.resolve()
-    }
-    get() {
-        /* return Promise.resolve(storage(this.name)) */
-        return new Promise(resolve => {
-            const state = storage(this.name)
-
-            setTimeout(() => {
-                resolve(state)
-            }, 2500)
-        })
-    }
-}
+import {LocalStorageClient} from '../shared/LocalStorageClient'
 
 export class ExcelPage extends Page {
     constructor(param) {
