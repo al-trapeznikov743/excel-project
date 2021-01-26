@@ -1,7 +1,7 @@
 {
   "name": "project_01_excel",
   "version": "1.0.0",
-  "homepage": "https://github.com/al-trapeznikov743/excel-project.github.io#readme",
+  "homepage": "http://al-trapeznikov743.github.io/excel-project",
   "description": "JS Excel Application",
   "main": "webpack.config.js",
   "scripts": {
